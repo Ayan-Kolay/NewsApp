@@ -1,0 +1,34 @@
+.row{
+    padding: 2%;
+    margin:2%;
+}
+.News-col {
+    margin-bottom: 15px;
+}
+
+.navbar{
+    background-color: rgb(139, 19, 19);
+}
+.navbar a{
+    color:white;
+
+}
+.dropdown-menu li a{
+    color:white;
+}
+.dropdown-menu{
+    background-color: rgb(34, 33, 33);
+}
+.card-img-top{
+    height: 15rem;
+}
+
+.scroll-div {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.scroll-div::-webkit-scrollbar {
+    display: none;
+}
+  
