@@ -3,7 +3,7 @@ const path = require('path')
 const router = express.Router();
 const axios = require('axios');
 
-router.get('/:country/:topic',async(req,res)=>{
+router.get('/:topic/:country',async(req,res)=>{
 
     let newsApi;
     let url;

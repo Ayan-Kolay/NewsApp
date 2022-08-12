@@ -43,10 +43,10 @@
                                 Country
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a id="in" class="dropdown-item" href="/in/<%=topic%>"
-                                        onClick="reply_click(this.id)">India</a></li>
-                                <li><a id="us" class="dropdown-item" href="/us/<%=topic%>"
-                                        onClick="reply_click(this.id)">USA</a></li>
+                                <li><a id="in" class="dropdown-item" href="/<%=topic%>/in"
+                                        >India</a></li>
+                                <li><a id="us" class="dropdown-item" href="/<%=topic%>/us>"
+                                        >USA</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -67,7 +67,9 @@
     </section>
 
     <%if(articles.length==0) {%>
-        <h1 class="no-article">No Articles Found</h1>
+        <div class="not-found">
+            <h1 class="not-found-h1">Not Found</h1>
+        </div>
     <%}%>
     <section id="NewsTiles">
         <div class="row">
@@ -76,9 +78,9 @@
                 <%if(articles[i].description!=null && articles[i].urlToImage!=null) {%>
 
                     <div class="News-col col-lg-4 col-md-6">
-                        <div class="card" style="width: 28rem;height:31rem;">
+                        <div class="card">
                             <img class="card-img-top" src="<%- articles[i].urlToImage %>" alt="image">
-                            <div class="card-body scroll-div">
+                            <div class="card-body">
                                 <h5 class="card-title">
                                     <%=articles[i].title%>
                                 </h5>
