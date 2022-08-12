@@ -5,7 +5,6 @@ const port = 3000;
 const router = express.Router();
 const ejs = require('ejs');
 
-
 app.set('view engine','ejs');
 
 app.use(express.static(path.join(__dirname,'public')));
@@ -15,6 +14,6 @@ app.use('/',require(path.join(__dirname,'src/routes/country.js')));
 app.use('/',require(path.join(__dirname,'src/routes/topics.js')));
 
 
-app.listen(port,()=>{
+app.listen(port||process.env.PORT,()=>{
     console.log("Listning on port 3000");
 })
