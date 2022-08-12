@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({extended: true}));
 
 router.get('/',async(req,res)=>{
-    const newsApi = await axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=c7aebe8658a1426882926938b9dc5e95")
+    const newsApi = await axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=c7aebe8658a1426882926938b9dc5e95")
     articles = newsApi.data.articles;
     res.render(path.join(__dirname,'../views/news'),{articles:articles,topic:"everything"});
 })
