@@ -14,6 +14,6 @@ app.use('/',require(path.join(__dirname,'src/routes/country.js')));
 app.use('/',require(path.join(__dirname,'src/routes/topics.js')));
 
 
-app.listen(port||process.env.PORT,()=>{
+app.listen(process.env.PORT||port,()=>{
     console.log("Listning on port 3000");
 })
